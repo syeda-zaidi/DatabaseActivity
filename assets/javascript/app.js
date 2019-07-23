@@ -34,6 +34,7 @@ let config = {
     // $("#highest-bidder").text(highPrice);
     // $("#highest-price").text(highBidder);
   
+    
   
   
   }, (errorObject) => {
