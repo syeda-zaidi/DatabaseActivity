@@ -2,14 +2,91 @@
 <html>
 
 <head>
-    <title>
-        Firebase app
-    </title>
+  <title>
+    Firebase app
+  </title>
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link type="stylesheet" href="./assets/css/style.css">
-    <script type="text/javascript" src="./assets/javascript/app.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link type="stylesheet" href="./assets/css/style.css">
+  <script type="text/javascript" src="./assets/javascript/app.js"></script>
 </head>
+
+<body>
+
+  <div class="jumbotron text-center">
+    <h1 class="display-4">Employee Data Management </h1>
+    <p class="lead">A comprehensive directory of employee billable hours </p>
+    <hr class="my-4">
+  </div>
+
+  <table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">Employee Name </th>
+        <th scope="col">Role</th>
+        <th scope="col">Start Date</th>
+        <th scope="col">Months Worked</th>
+        <th scope="col">Monthly Rate</th>
+        <th scope="col">Total Billed</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Mark</td>
+        <td>Otto</td>
+        <td>@mdo</td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>Jacob</td>
+        <td>Thornton</td>
+        <td>@fat</td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td>Larry</td>
+        <td>the Bird</td>
+        <td>@twitter</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="card">
+    <div class="card-body">
+      <h2>ADD EMPLOYEE</h2>
+
+      <form>
+        <div class="form-group">
+          <label for="name-input">Employee Name</label>
+          <input type="text" class="form-control" id="name-input" >
+        </div>
+        <div class="form-group">
+          <label for="role-input">Role</label>
+          <input type="text" class="form-control" id="role-input" >
+        </div>
+        <div class="form-group">
+          <label for="date-input">Date</label>
+          <input type="text" class="form-control" id="date-input">
+        </div>
+        <div class="form-group">
+          <label for="rate-input">Rate</label>
+          <input type="text" class="form-control" id="rate-input" >
+        </div>
+      </form>
+
+      <button class="btn btn-primary" id="submit-btn">Submit</button>
+
+
+    </div>
+  </div>
+
+
+
+
+</body>
+
+
 
 </html>
