@@ -22,33 +22,37 @@ let config = {
   
   database.ref("/EmployeeData").on("child_added", (snapshot) => {
   
-    // if (snapshot.child("").exists() && snapshot.child("highPrice").exists()) {
+    let newRow = snapshot.val();
+
+    console.log(newRow);
+
+    let newTR = $("<tr>");
+
+    let tdName = $("<td>").text(newRow.name);
+
+    let tdRole = $("<td>").text(newRow.role);
+
+    let tdDate = $("<td>").text(newRow.date);    
   
-    // }
+    let tdMonths = $("<td>").text("needs calc");    
+
+    let tdRate = $("<td>").text(newRow.rate);
+
+    let tdTotal = $("<td>").text("needs calc"); 
   
-    // highPrice = snapshot.val().highPrice;
-    // highBidder = snapshot.val().highBidder;
-  
-  
-  
-    // $("#highest-bidder").text(highPrice);
-    // $("#highest-price").text(highBidder);
-  
-    
-  
+    newTR.append(tdName).append(tdRole).append(tdDate).append(tdMonths).append(tdRate).append(tdTotal);
+
+    $("#employeeTable").append(newTR);
   
   }, (errorObject) => {
     console.log("The read failed: " + errorObject.code);
   });
   
-  alert("here2");
 
 
   $("#submit-btn").click((evt) => {
 
-
-    alert("here");
-    // evt.preventDefault();
+    evt.preventDefault();
   
     newName = $("#name-input").val().trim();
     newRole = $("#role-input").val().trim();
@@ -62,12 +66,10 @@ let config = {
     employees.push(newEmployee);
   
     database.ref("/EmployeeData").push({
-      // name: newName,
-      // role: newRole,
-      // date: newDate,
-      // rate: newRate
-
-      newEmployee
+      name: newName,
+      role: newRole,
+      date: newDate,
+      rate: newRate
     });
   
   
