@@ -40,10 +40,14 @@ let config = {
     console.log("The read failed: " + errorObject.code);
   });
   
-  
-  $("#submit-btn").click((event) => {
+  alert("here2");
+
+
+  $("#submit-btn").click((evt) => {
+
+
     alert("here");
-    event.preventDefault();
+    // evt.preventDefault();
   
     newName = $("#name-input").val().trim();
     newRole = $("#role-input").val().trim();
@@ -57,10 +61,12 @@ let config = {
     employees.push(newEmployee);
   
     database.ref("/EmployeeData").push({
-      name: newName,
-      role: newRole,
-      date: newDate,
-      rate: newRate
+      // name: newName,
+      // role: newRole,
+      // date: newDate,
+      // rate: newRate
+
+      newEmployee
     });
   
   
